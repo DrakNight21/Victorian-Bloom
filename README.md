@@ -14,7 +14,7 @@
 |------------------------|----------|------------------|
 | Aditya Hans            | 29       | 12308188         |
 | Mahek Singh            | 33       | 12308825         |
-| Samridh Bhattacharya   | 58       | 12306369         |
+| Samriddha Bhattacharjee| 58       | 12306369         |
 | Abhigyan Hazarika      | 59       | 12310213         |
 
 ---
