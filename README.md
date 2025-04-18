@@ -81,8 +81,7 @@ This DFD represents the breakdown of key processes such as product browsing, ord
 
 ## 🔗 Project Links
 
-- **GitHub Repository**: [Insert GitHub Link Here]  
-- **Live Website**: [Insert Deployed Link Here]
+- **GitHub Repository**: [https://github.com/AddyTheDeveloper/Victorian-Bloom]  
 
 ---
 
