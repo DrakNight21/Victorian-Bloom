@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victorian Bloom | Elegant Floral Boutique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+    
+
+
+</head>
+<body class="font-['Lora',serif] bg-[#faf7f2] text-[#4a4a4a]">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-md py-4 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center sticky top-0 z-10">
+        <div class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold text-[#8a5d58]">Victorian Bloom</div>
+        <nav class="mt-4 md:mt-0">
+            <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-lg md:text-xl font-['Cinzel',serif]">
+                <li><a href="#products" class="hover:text-[#b98d86] transition-colors duration-300">Products</a></li>
+                <li><a href="#about" class="hover:text-[#b98d86] transition-colors duration-300">About</a></li>
+                <li><a href="#contact" class="hover:text-[#b98d86] transition-colors duration-300">Contact</a></li>
+                <li><a href="cartPage.html"><button id="cart-button" class="flex items-center bg-[#8a5d58] text-white px-4 py-2 rounded-full shadow-md hover:bg-[#b98d86] transition text-sm ml-4">
+                    🛍️(<span id="cart-count">0</span>)
+                  </button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slider -->
+    <div class="hero-section relative mx-auto my-6 md:my-10 max-w-6xl">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img id="img1" src="slider1.jpeg" alt="Elegant Flower Arrangement" class="w-full h-full object-cover"></div>
+                <div class="slide"><img id="img2" src="slider2.jpeg" alt="Beautiful Bouquet" class="w-full h-full object-cover"></div>
+                <div class="slide"><img id="img3" src="slider3.jpeg" alt="Premium Floral Display" class="w-full h-full object-cover"></div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            
+            <div class="absolute inset-0 bg-gradient-to-r from-[#00000066] to-transparent flex items-center">
+                <div class="ml-10 md:ml-20 max-w-md text-white">
+                    <h2 class="text-3xl md:text-5xl font-['Cinzel',serif] font-bold mb-4">Exquisite Floral Arrangements</h2>
+                    <p class="mb-6 text-lg">Handcrafted bouquets for every occasion with the finest blooms.</p>
+                    <a href="#products" class="bg-[#8a5d58] hover:bg-[#b98d86] text-white py-2 px-6 rounded-md transition-colors duration-300 inline-block font-medium">Explore Collection</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products -->
+    <section id="products" class="max-w-7xl mx-auto my-16 px-4 md:px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold mb-3 text-[#4a4a4a]">Our Premium Collection</h2>
+            <div class="w-24 h-1 bg-[#b98d86] mx-auto"></div>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Each bloom is carefully selected to create arrangements that evoke beauty and elegance.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="Orchid.jpeg" alt="Orchid Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <a href="product1.html"><button class="quick-view-btn">Quick View</button></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Luxurious Orchid</h3>
+                    <div class="product-price">Rs. 899</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="sunflower.jpeg" alt="Sunflower Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <a href="product2.html"><button class="quick-view-btn">Quick View</button></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Radiant Sunflower</h3>
+                    <div class="product-price">Rs. 599</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="rose.jpeg" alt="Rose Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <a href="product3.html"><button class="quick-view-btn">Quick View</button></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Classic Roses</h3>
+                    <div class="product-price">Rs. 1099</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="tulip.jpeg" alt="Tulip Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <a href="product4.html"><button class="quick-view-btn">Quick View</button></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Elegant Tulips</h3>
+                    <div class="product-price">Rs. 699</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="marigold.jpeg" alt="Marigold Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <a href="product5.html"><button class="quick-view-btn">Quick View</button></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Vibrant Marigold</h3>
+                    <div class="product-price">Rs. 289</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="daisy.jpeg" alt="Daisy Arrangement" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <a href="product6.html"><button class="quick-view-btn">Quick View</button></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Fresh Daisies</h3>
+                    <div class="product-price">Rs. 499</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="lavender.jpeg" alt="Premium Orchid" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <a href="product7.html"><button class="quick-view-btn">Quick View</button></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Lavender</h3>
+                    <div class="product-price">Rs. 1299</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="lily.jpeg" alt="Exotic Orchid" class="w-full h-full object-cover">
+                    <div class="hover-overlay">
+                        <a href="product8.html"><button class="quick-view-btn">Quick View</button></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Lily</h3>
+                    <div class="product-price">Rs. 899</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-10">
+            <a href="#" class="border-2 border-[#8a5d58] text-[#8a5d58] hover:bg-[#8a5d58] hover:text-white py-2 px-6 rounded-md transition-colors duration-300 inline-block font-medium">View All Collections</a>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="my-16 bg-[#f0e9e4] py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="shopbanner.png" alt="Victorian Bloom Special Collection" class="rounded-lg shadow-lg max-w-full h-auto w-80 h-40">
+            </div>
+            <div class="md:w-1/2 md:pl-12">
+                <h2 class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold mb-4 text-[#4a4a4a]">Seasonal Specials</h2>
+                <p class="text-lg mb-6">Our carefully curated seasonal collections bring the beauty of each season to your home. Experience the finest blooms, expertly arranged to capture nature's changing palette.</p>
+                <a href="#" class="bg-[#8a5d58] hover:bg-[#b98d86] text-white py-2 px-6 rounded-md transition-colors duration-300 inline-block font-medium">Discover More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="max-w-7xl mx-auto my-16 px-4 md:px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold mb-3 text-[#4a4a4a]">What Our Customers Say</h2>
+            <div class="w-24 h-1 bg-[#b98d86] mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+            <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">The arrangement I received for my anniversary was absolutely stunning. The roses were fresh and beautifully arranged. Will definitely order again!</p>
+                <div class="testimonial-author">- Priya Sharma</div>
+                <div class="testimonial-rating">★★★★★</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">Victorian Bloom's orchids lasted for weeks! The attention to detail in their arrangements is unmatched. My mother was thrilled with her birthday gift.</p>
+                <div class="testimonial-author">- Raj Patel</div>
+                <div class="testimonial-rating">★★★★★</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">I've been ordering from Victorian Bloom for all special occasions. Their customer service is exceptional and the flowers are always fresh and gorgeous.</p>
+                <div class="testimonial-author">- Meera Kapoor</div>
+                <div class="testimonial-rating">★★★★★</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-[#8a5d58] text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold mb-3">Join Our Flower Family</h2>
+            <p class="mb-6 max-w-2xl mx-auto">Subscribe to receive exclusive offers, floral care tips, and be the first to know about seasonal collections.</p>
+            
+            <form class="max-w-md mx-auto flex flex-col md:flex-row gap-4">
+                <input type="email" placeholder="Your email address" class="flex-grow py-3 px-4 rounded-l-md text-gray-800 focus:outline-none">
+                <button type="submit" class="bg-[#4a4a4a] hover:bg-gray-700 py-3 px-6 rounded-r-md transition-colors duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-7xl mx-auto my-16 px-4 md:px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold mb-3 text-[#4a4a4a]">Our Story</h2>
+            <div class="w-24 h-1 bg-[#b98d86] mx-auto"></div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                <p class="text-lg mb-4">Victorian Bloom has been bringing the joy of flowers to homes and special events across the country. We take pride in creating arrangements that helps our customers feel special.</p>
+                <p class="text-lg mb-4">We source our flowers directly from sustainable farms, ensuring that each bloom is fresh and vibrant . Our commitment to deliever quality products has made us the preferred choice for flower enthusiasts.</p>
+                <p class="text-lg">From intimate gatherings to grand celebrations, Victorian Bloom adds a touch of elegance to every occasion and we love to make you smile !</p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="slider1.jpeg" alt="Victorian Bloom Story" class="rounded-lg shadow-lg max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-[#f0e9e4] py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold mb-3 text-[#4a4a4a]">Get In Touch</h2>
+                <div class="w-24 h-1 bg-[#b98d86] mx-auto"></div>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">We'd love to hear from you. Reach out for custom arrangements or any questions about our collections.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="contact-info">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-['Cinzel',serif] font-semibold mb-2">Visit Our Store</h3>
+                        <p>123 Floral Avenue</p>
+                        <p>Garden District, Delhi 110001</p>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-['Cinzel',serif] font-semibold mb-2">Opening Hours</h3>
+                        <p>Monday - Friday: 9AM - 7PM</p>
+                        <p>Saturday: 10AM - 6PM</p>
+                        <p>Sunday: 11AM - 3PM</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-['Cinzel',serif] font-semibold mb-2">Contact</h3>
+                        <p>Phone: +91 98765 43210</p>
+                        <p>Email: hello@victorianbloom.com</p>
+                    </div>
+                </div>
+                
+                <form class="contact-form bg-white p-6 rounded-lg shadow-md">
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-1">Name</label>
+                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#8a5d58]" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-1">Email</label>
+                        <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#8a5d58]" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-1">Message</label>
+                        <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#8a5d58]" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-[#8a5d58] hover:bg-[#b98d86] text-white py-2 px-6 rounded-md transition-colors duration-300">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#4a4a4a] text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-['Cinzel',serif] font-bold mb-4">Victorian Bloom</h3>
+                    <p class="mb-4">Bringing elegance and beauty to every occasion with our handcrafted floral arrangements.</p>
+                    <div class="social-icons flex space-x-4">
+                        <a href="#" class="hover:text-[#b98d86] transition-colors duration-300">
+                            <img src="icons8-instagram.svg" alt="Instagram" width="30">
+                        </a>
+                        <a href="#" class="hover:text-[#b98d86] transition-colors duration-300">
+                            <img src="icons8-facebook.svg" alt="Facebook" width="30">
+                        </a>
+                        <a href="#" class="hover:text-[#b98d86] transition-colors duration-300">
+                            <img src="icons8-whatsapp.svg" alt="WhatsApp" width="30">
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Home</a></li>
+                        <li><a href="#products" class="hover:text-[#b98d86] transition-colors duration-300">Products</a></li>
+                        <li><a href="#about" class="hover:text-[#b98d86] transition-colors duration-300">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-[#b98d86] transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Collections</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Seasonal Bouquets</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Wedding Flowers</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Celebration Arrangements</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Plant Collection</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Customer Care</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Flower Care Tips</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Delivery Information</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Return Policy</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 pt-6 text-center text-sm">
+                <p>&copy; 2025 Victorian Bloom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!--slider-->
+    <script>
+        const slides = document.querySelector(".slides");
+        const totalSlides = slides.children.length;
+        let index = 0;
+      
+        function showSlide(i) {
+          // Make sure index wraps correctly
+          if (i >= totalSlides) index = 0;
+          else if (i < 0) index = totalSlides - 1;
+          else index = i;
+      
+          // Move the slides using translateX
+          slides.style.transform = `translateX(-${index * (100 / totalSlides)}%)`;
+        }
+      
+        // Button event listeners
+        document.querySelector(".next").addEventListener("click", () => {
+          showSlide(index + 1);
+        });
+      
+        document.querySelector(".prev").addEventListener("click", () => {
+          showSlide(index - 1);
+        });
+      
+        // // Optional autoplay
+        // setInterval(() => {
+        //   showSlide(index + 1);
+        // }, 5000);
+
+        function moveSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        // Initialize slider
+        showSlide(currentSlide);
+      </script>
+      
+</body>
+</html>

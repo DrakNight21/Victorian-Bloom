@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lora', serif;
+    color: #4a4a4a;
+    background-color: #faf7f2;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+}
+
+/* Hero Slider */
+.slider {
+    position: relative;
+    height: 70vh;
+    min-height: 400px;
+    max-height: 600px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    width: 300%; /* 3 slides */
+    transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+    min-width: 33.333%;
+    position: relative;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    transition: all 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Product Cards */
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-image:hover .hover-overlay {
+    opacity: 1;
+}
+
+.quick-view-btn {
+    background-color: white;
+    color: #4a4a4a;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.quick-view-btn:hover {
+    background-color: #8a5d58;
+    color: white;
+}
+
+.product-info {
+    padding: 16px;
+    text-align: center;
+}
+
+.product-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #4a4a4a;
+}
+
+.product-price {
+    font-weight: 600;
+    color: #8a5d58;
+    margin-bottom: 12px;
+}
+
+.add-to-cart-btn {
+    background-color: #8a5d58;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #b98d86;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 48px;
+    color: #d9c4bb;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    opacity: 0.4;
+}
+
+.testimonial-text {
+    margin-top: 20px;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    margin-top: 16px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.testimonial-rating {
+    color: #e4b363;
+    font-size: 1.1rem;
+    text-align: right;
+    margin-top: 4px;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #8a5d58;
+    box-shadow: 0 0 0 2px rgba(138, 93, 88, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .slider {
+        height: 50vh;
+    }
+    
+    .prev, .next {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
