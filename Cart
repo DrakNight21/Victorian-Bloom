@@ -1,0 +1,127 @@
+*Cart Page*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Victorian Bloom | Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+  </head>
+  
+</head>
+<body class="bg-faf7f2 font-serif text-gray-800">
+    <!--Navbar-->
+    <header class="bg-[#F5F5DC] shadow-md py-4 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center sticky top-0 z-10">
+        <div class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold text-[#8a5d58]">Victorian Bloom</div>
+        <nav class="mt-4 md:mt-0">
+            
+            <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-lg md:text-xl font-['Cinzel',serif]">
+                <li><a href="test.html" class="hover:text-[#b98d86] transition-colors duration-300 text-xl text-[#8a5d58] ">Continue Shopping 🛍️</a></li>
+                <li><a href="#contact-form" class="hover:text-[#b98d86] transition-colors duration-300 text-xl text-[#8a5d58]">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--main-->
+    <div class="flex justify-center ">
+        <div class="w-full h-30 m-10 shadow-md rounded-lg ">
+            <div id="cartEmpty" class="m-10">Oops! Looks like your cart is Empty!</div>
+            <!--Total-->
+    <div class="flex flex-col sm:flex-row justify-between items-center mt-8 gap-4">
+        <button id="clear-cart" class="btn-danger px-6 py-2 rounded-lg text-xl text-[#8a5d58] font-bold ">🗑 Clear Cart</button>
+        <button class="bg-[#8a5d58] hover:bg-[#b98d86] text-white font-semibold py-3 px-6 rounded w-50 transition">
+            Proceed to Pay
+            </button>
+        <div id="total" class="text-xl font-semibold text-[#8a5d58] m-5">Total: Rs. 0</div>
+    </div>
+        </div>
+    </div>
+
+    
+
+    <!--Contact US-->
+    <div class="m-10 ">
+        <form id="contact-form" class=" bg-white p-6 rounded-lg shadow-lg w-full">
+            <h2 class="flex items-center justify-center text-[#8a5d58] m-5 text-lg">Conatct Us for any Query or Support</h2>
+            <div class="mb-4">
+                <label class="block text-sm font-medium mb-1">Name</label>
+                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#8a5d58]" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-medium mb-1">Email</label>
+                <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#8a5d58]" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-medium mb-1">Message</label>
+                <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#8a5d58]" required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-[#8a5d58] hover:bg-[#b98d86] text-white py-2 px-6 rounded-md transition-colors duration-300">Send Message</button>
+        </form>
+    </div>
+    
+
+     <!-- Footer -->
+     <footer class="bg-[#4a4a4a] text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-['Cinzel',serif] font-bold mb-4">Victorian Bloom</h3>
+                    <p class="mb-4">Bringing elegance and beauty to every occasion with our handcrafted floral arrangements.</p>
+                    <div class="social-icons flex space-x-4">
+                        <a href="#" class="hover:text-[#b98d86] transition-colors duration-300">
+                            <img src="icons8-instagram.svg" alt="Instagram" width="30">
+                        </a>
+                        <a href="#" class="hover:text-[#b98d86] transition-colors duration-300">
+                            <img src="icons8-facebook.svg" alt="Facebook" width="30">
+                        </a>
+                        <a href="#" class="hover:text-[#b98d86] transition-colors duration-300">
+                            <img src="icons8-whatsapp.svg" alt="WhatsApp" width="30">
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Home</a></li>
+                        <li><a href="#products" class="hover:text-[#b98d86] transition-colors duration-300">Products</a></li>
+                        <li><a href="#about" class="hover:text-[#b98d86] transition-colors duration-300">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-[#b98d86] transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Collections</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Seasonal Bouquets</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Wedding Flowers</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Celebration Arrangements</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Plant Collection</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Customer Care</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Flower Care Tips</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Delivery Information</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">Return Policy</a></li>
+                        <li><a href="#" class="hover:text-[#b98d86] transition-colors duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 pt-6 text-center text-sm">
+                <p>&copy; 2025 Victorian Bloom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+      
+</body>
+</html>
