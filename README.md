@@ -4,7 +4,7 @@
 📚 *Course Codes:* INT219 & INT220  
 🎓 *Course Names:* Front End Web Development & Server Side Scripting  
 📅 *Semester:* Spring 2025  
-📝 *Prepared for:* Continuous Assessment 3  
+📝 *Prepared for:* Continuous Assessment 2 
 
 ---
 
