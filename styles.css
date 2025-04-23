@@ -1,0 +1,103 @@
+
+body {
+    background: url('background3.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+
+
+.dashboard-body {
+    background: url('background1.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    color: #7b4b27;
+}
+
+
+.login-container {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 450px;
+    text-align: center;
+    position: relative;
+}
+
+.login-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #7b4b27;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.login-container h2 {
+    font-size: 16px;
+    color: #5a3e2b;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #5a3e2b;
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+
+}
+
+select, input {
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.85);
+    outline: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+select:focus, input:focus {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn {
+    width: 50%;
+    height: 50px;
+    padding: 12px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    background: linear-gradient(to right, #c49a6c, #e3c99e);
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #b38655, #d6af82);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}

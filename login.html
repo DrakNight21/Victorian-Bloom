@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victorian Bloom - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1 >Victorian Bloom</h1>
+        <h2>Administrator / Customer</h2>
+
+        <form id="login-form" action="login.php" method="POST">
+            <label for="user-type">Select User Type</label>
+            <select id="user-type" name="user_type" required>
+                <option value="">Select</option>
+                <option value="admin">Administrator</option>
+                <option value="customer">Customer</option>
+            </select>
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="    Enter your email" required  style="width:390px;height:55px">
+        
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="    Enter your password" required style="width:390px;height:55px">
+        
+            <div class="flex pt-4">
+                <!-- <button type="submit"  class="submit-btn" style="margin: 4px;">Login</button>
+                <button type="submit"  class="submit-btn" style="margin: 4px;">Sign Up</button> -->
+                <button type="submit" name="submitAction" value="login" class="submit-btn" style="margin: 4px;">Login</button>
+                <button type="submit" name="submitAction" value="signup" class="submit-btn" style="margin: 4px;">Sign Up</button>
+                <input type="hidden" id="action" name="action">
+                <p id="message" class="mt-2 text-sm"></p>
+
+
+            </div>
+            <p>Forgot password? <a href="#">Retrieve !</a></p>
+
+        </form>
+    <script src="script.js"></script>
+</body>
+</html>
+
