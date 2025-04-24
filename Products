@@ -1,0 +1,110 @@
+**Products**
+<!DOCTYPE html>
+<html lang="en" class="bg-[#faf7f2] text-[#4a4a4a]">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxurious Orchid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<header class="bg-white shadow-md py-4 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center sticky top-0 z-10">
+    <div class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold text-[#8a5d58]">Victorian Bloom</div>
+    <nav class="mt-4 md:mt-0">
+        <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8 text-lg md:text-xl font-['Cinzel',serif]">
+            <li><a href="test.html" class="hover:text-[#b98d86] transition-colors duration-300">Products</a></li>
+            <li><a href="#about" class="hover:text-[#b98d86] transition-colors duration-300">About</a></li>
+            <li><a href="#contact" class="hover:text-[#b98d86] transition-colors duration-300">Contact</a></li>
+            <li><a href="cartPage.html"><button id="cart-button" class="flex items-center bg-[#8a5d58] text-white px-4 py-2 rounded-full shadow-md hover:bg-[#b98d86] transition text-sm ml-4">
+                🛍️(<span id="cart-count">0</span>)
+              </button></a></li>
+        </ul>
+    </nav>
+</header>
+<body class="font-['Lora']">
+
+  <div class="max-w-7xl mx-auto p-6">
+    <div class="grid md:grid-cols-2 gap-10">
+      
+      <!-- Left: Images -->
+      <div>
+        <img id="orchid" src="Orchid.jpeg" class="rounded-lg w-[450px] h-[500px] shadow-lg" alt="Product Image" />
+        
+        <div class="flex gap-3 mt-4">
+          <img onclick="changeImage(this.src)" src="Orchid.jpeg" class=" h-20 object-contain rounded-lg cursor-pointer border hover:border-[#8a5d58]" />
+          <img onclick="changeImage(this.src)" src="Orchid.jpeg" class=" w-20 h-20 object-cover rounded-lg cursor-pointer border hover:border-[#8a5d58]" />
+          <img onclick="changeImage(this.src)" src="Orchid.jpeg" class="w-20 h-20 object-cover rounded-lg cursor-pointer border hover:border-[#8a5d58]" />
+        </div>
+      </div>
+
+      <!-- Right: Details -->
+      <div>
+        <h1 class="font-['Cinzel'] text-3xl font-semibold mb-2">Luxurious Orchid</h1>
+        <p class="text-[#8a5d58] text-xl font-bold mb-2">₹899 <span class="line-through text-gray-400 ml-2">₹959</span> <span class="text-green-600 ml-1 text-sm">6% Off</span></p>
+        <a href="#Reviews"><p class="text-sm text-gray-600 mb-4 cursor-pointer hover:text-blue-800">234 Reviews</p>
+        </a>
+
+        <div class="mb-4">
+          <label class="block text-sm mb-1 font-semibold">Gift Receiver’s Location:</label>
+          <input type="text" placeholder="Enter Pincode / City" class="w-full p-2 border rounded outline-none focus:ring-2 focus:ring-[#8a5d58]" />
+        </div>
+
+        <div class="bg-yellow-100 text-yellow-800 text-sm p-2 rounded mb-4">
+          🚫 This product cannot be delivered at the selected location.
+        </div>
+
+        <div class="bg-blue-50 text-sm p-3 rounded border border-blue-200 mb-4">
+          💰 Assured Cashback up to Rs.100 using Paytm UPI
+        </div>
+
+        <button class="bg-[#8a5d58] hover:bg-[#b98d86] text-white font-semibold py-3 px-6 rounded w-full transition">
+        Buy Now
+        </button>
+        <a href="cartPage.html">
+            <button class="bg-[#8a5d58] hover:bg-[#b98d86] text-white font-semibold py-3 px-6 rounded w-full transition mt-5">
+            Add to Cart
+            </button>
+        </a>
+        
+
+      </div>
+    </div>
+  </div>
+  <!-- Testimonials -->
+  <section id="Reviews" class="max-w-7xl mx-auto my-16 px-4 md:px-6 bg-white p-5 rounded-lg">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-['Cinzel',serif] font-bold mb-3 text-[#4a4a4a] ">What Our Customers Say</h2>
+        <div class="w-24 h-1 bg-[#b98d86] mx-auto"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="testimonial-card bg-[#f0e9e4] rounded-lg">
+            <div class="quote-icon">❝</div>
+            <p class="testimonial-text">The arrangement I received for my anniversary was absolutely stunning. The roses were fresh and beautifully arranged. Will definitely order again!</p>
+            <div class="testimonial-author">- Priya Sharma</div>
+            <div class="testimonial-rating">★★★★★</div>
+        </div>
+         
+        <div class="testimonial-card bg-[#f0e9e4] rounded-lg">
+            <div class="quote-icon">❝</div>
+            <p class="testimonial-text">Victorian Bloom's orchids lasted for weeks! The attention to detail in their arrangements is unmatched. My mother was thrilled with her birthday gift.</p>
+            <div class="testimonial-author">- Raj Patel</div>
+            <div class="testimonial-rating">★★★★★</div>
+        </div>
+        
+        <div class="testimonial-card bg-[#f0e9e4] rounded-lg">
+            <div class="quote-icon">❝</div>
+            <p class="testimonial-text">I've been ordering from Victorian Bloom for all special occasions. Their customer service is exceptional and the flowers are always fresh and gorgeous.</p>
+            <div class="testimonial-author">- Meera Kapoor</div>
+            <div class="testimonial-rating">★★★★★</div>
+        </div>
+    </div>
+</section>
+
+  <script>
+    function changeImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
+
+</body>
+</html>
